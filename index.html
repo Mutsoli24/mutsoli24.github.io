@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millicent Neema Mutsoli | Mathematics, Economics & IT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .nav-links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #2980b9;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a252f, #2c3e50);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color: #85c1e9;
+        }
+        
+        .hero .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .btn:hover {
+            background: #1a5276;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        
+        .section-title span {
+            color: #2980b9;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image .placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2980b9, #1a5276);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: white;
+        }
+        
+        .about-image .initials {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 8px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: #e9ecef;
+            padding: 4px 14px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #2c3e50;
+        }
+        
+        .education-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #2980b9;
+        }
+        
+        .education-item h3 {
+            color: #2c3e50;
+        }
+        
+        .education-item .institution {
+            color: #2980b9;
+            font-weight: 500;
+        }
+        
+        .education-item .period {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .project-card .tech {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+        
+        .project-card .tech span {
+            background: #e9ecef;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            border-color: #2980b9;
+            background: #f0f7ff;
+            color: #2980b9;
+        }
+        
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer a {
+            color: #85c1e9;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links a {
+                margin-left: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Millicent Mutsoli</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge">BSc Mathematics, Economics & IT | Graduating November 2026</div>
+            <h1>Millicent Neema Mutsoli</h1>
+            <p class="subtitle">Mathematics | Economics | Information Technology</p>
+            <p class="tagline">
+                Bridging the gap between quantitative analysis, economic theory, and technology to solve real-world problems. Passionate about data science and economic policy analysis.
+            </p>
+            <div>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="placeholder">
+                        <span class="initials">MN</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I am a final-year student at Maseno University, pursuing a Bachelor of Science in Mathematics and Economics with Information Technology. I am passionate about using quantitative analysis, economic principles, and technology to solve complex problems.
+                    </p>
+                    <p>
+                        My academic background gives me a unique perspective on data, allowing me to understand both the mathematical foundations and the economic implications of analytical solutions. I am particularly interested in data science, economic modeling, and technology-driven decision-making.
+                    </p>
+                    <p>
+                        I am set to graduate in <strong>November 2026</strong> and am actively seeking opportunities in data science, economic analysis, and policy analysis where I can apply my interdisciplinary skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3>Mathematics & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Statistics</span>
+                        <span class="skill-tag">Calculus</span>
+                        <span class="skill-tag">Linear Algebra</span>
+                        <span class="skill-tag">Probability</span>
+                        <span class="skill-tag">Mathematical Modeling</span>
+                        <span class="skill-tag">Optimization</span>
+                        <span class="skill-tag">Quantitative Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Economics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microeconomics</span>
+                        <span class="skill-tag">Macroeconomics</span>
+                        <span class="skill-tag">Econometrics</span>
+                        <span class="skill-tag">Economic Policy</span>
+                        <span class="skill-tag">Financial Analysis</span>
+                        <span class="skill-tag">Market Research</span>
+                        <span class="skill-tag">Economic Modeling</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Information Technology</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">My <span>Education</span></h2>
+            
+            <div class="education-item">
+                <h3>Bachelor of Science in Mathematics and Economics with IT</h3>
+                <p class="institution">Maseno University</p>
+                <p class="period">Expected Graduation: November 2026</p>
+                <p style="margin-top: 10px;">
+                    <strong>Relevant Coursework:</strong> Statistics, Econometrics, Calculus, Linear Algebra, 
+                    Probability Theory, Microeconomics, Macroeconomics, Data Analysis, Database Management, 
+                    Programming Fundamentals, Machine Learning.
+                </p>
+            </div>
+            
+            <div class="education-item">
+                <h3>High School Diploma</h3>
+                <p class="institution">The Sacred Heart Mukumu Girls High School</p>
+                <p class="period">Graduated: 2021</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="projects" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>Telco Customer Churn Analysis</h3>
+                    <p>Analyzed customer churn data for a telecommunications company. Identified key drivers of churn and built predictive models to identify at-risk customers.</p>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Scikit-learn</span>
+                        <span>SMOTE</span>
+                        <span>Seaborn</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <p><strong>Key Result:</strong> Random Forest model achieved 0.591 F1-Score. Month-to-month contracts identified as top churn driver with 42.7% churn rate.</p>
+                    <a href="https://github.com/Mutsoli24/telco-customer-churn-analysis" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>More Projects Coming Soon</h3>
+                    <p>I am actively working on new projects in data science, economic analysis, and mathematical modeling. Check back for updates.</p>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Data Science</span>
+                        <span>Economics</span>
+                    </div>
+                    <p><strong>Status:</strong> In Development</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's <span>Connect</span></h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">
+                I am open to internships, graduate roles, and networking opportunities. Feel free to reach out.
+            </p>
+            <div class="contact-links">
+                <a href="https://github.com/Mutsoli24" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/millicent-mutsoli-638779242/" target="_blank">LinkedIn</a>
+                <a href="mailto:mutsolineema@gmail.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Millicent Neema Mutsoli. All rights reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.9rem; opacity: 0.8;">
+                BSc Mathematics, Economics & IT | Maseno University | Graduating November 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
